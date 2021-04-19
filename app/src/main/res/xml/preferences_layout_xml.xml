@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/fl_main_preferences">
+        <!--
+        TODO: He intentado adaptar las Preferences Settings a AndroidX porque las "normales
+         me salían deprecadas y quiero aprender ya a hacer las nuevas pero me da que algo se
+         me escapa. Aquí en nombre, el tipo de StackOverFlow ponia com.quickme.musicme.Fragments.MainSettingsFragment
+         pero yo no entiendo dónde está el Fragment si lo que usamos nosotros es la actividad de Preferencias y
+         el XML en vez del layout.-->
+
+        <fragment
+            android:tag="frag"
+            android:name="com.serbladev.mygamebook.activities.PreferencesActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+</FrameLayout>
+    <!-- Se separan las preferencias por categorias, con PreferenceCategory -->
+    <PreferenceCategory android:title="Preferencias de pantalla">
+        <!-- Con esto se añade un Switch -->
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="modo_noche"
+            android:summary="Actívalo para tener un estilo y unos colores más oscuros en la aplicación"
+            android:title="Modo noche" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Otras herramientas">
+        <!--
+        TODO = Aquí es donde quiero que vayan otras tres "opciones" y un imageView.
+            (1): Un botón que te lleve a una página web de googlemaps (Enlace acortado: shorturl.at/iCEX8)
+            (2): Un botón que sirva para reiniciar toda la app a cero (volver al primer capítulo, eliminar los objetos encontrados, la estima ganada, etc)
+            (3): Un botón que te lleve a otra actividad donde haya un formulario para que puedan enviarme un correo desde la aplicación
+            (4): Un imageView con el logo"
+         Pero algo me dice que en las preferences sólo se pueden poner un determinado número de cosas.
+        -->
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

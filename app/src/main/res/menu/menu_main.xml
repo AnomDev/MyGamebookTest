@@ -5,4 +5,10 @@
     <item
         android:id="@+id/itemVerInventario"
         android:title="Ver Inventario" />
+
+    <item
+        android:id="@+id/itemAjustes"
+        android:title="Ajustes" />
+
+
 </menu>

@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
 
 
     <TextView
-        android:id="@+id/tvNumPagina"
+        android:id="@+id/tvNumCapitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Número de capítulo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.862"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -29,10 +29,12 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:text="TextView"
+        android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/capitulo_border"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -42,8 +44,8 @@
         app:layout_constraintGuide_end="165dp" />
 
     <TextView
-        android:id="@+id/tvOpcion1"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvEleccion1"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -52,78 +54,86 @@
         app:layout_constraintTop_toBottomOf="@+id/tvPagina" />
 
     <Button
-        android:id="@+id/bOpcion1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/bEleccion1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:text="Button"
+        android:backgroundTint="@color/black"
+        android:alpha="0.6"
         android:onClick="botonPulsado"
-        app:layout_constraintStart_toEndOf="@+id/tvOpcion1"
+        app:layout_constraintStart_toEndOf="@+id/tvEleccion1"
         app:layout_constraintTop_toBottomOf="@+id/tvPagina"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvOpcion1"/>
+        app:layout_constraintBaseline_toBaselineOf="@id/tvEleccion1"/>
 
     <TextView
-        android:id="@+id/tvOpcion2"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvEleccion2"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/tvOpcion3"
+        app:layout_constraintBottom_toTopOf="@+id/tvEleccion3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOpcion1" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEleccion1" />
 
     <Button
-        android:id="@+id/bOpcion2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/bEleccion2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:text="Button"
+        android:backgroundTint="@color/black"
+        android:alpha="0.6"
         android:onClick="botonPulsado"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvOpcion2"
-        app:layout_constraintStart_toEndOf="@+id/tvOpcion2"
-        app:layout_constraintTop_toBottomOf="@+id/bOpcion1" />
+        app:layout_constraintBaseline_toBaselineOf="@id/tvEleccion2"
+        app:layout_constraintStart_toEndOf="@+id/tvEleccion2"
+        app:layout_constraintTop_toBottomOf="@+id/bEleccion1" />
 
     <TextView
-        android:id="@+id/tvOpcion3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOpcion2" />
-
-
-    <Button
-        android:id="@+id/bOpcion3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Button"
-        android:onClick="botonPulsado"
-        app:layout_constraintStart_toEndOf="@+id/tvOpcion3"
-        app:layout_constraintTop_toBottomOf="@+id/bOpcion2"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvOpcion3"/>
-
-    <TextView
-        android:id="@+id/tvOpcion4"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvEleccion3"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOpcion3" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEleccion2" />
+
 
     <Button
-        android:id="@+id/bOpcion4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/bEleccion3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:text="Button"
+        android:backgroundTint="@color/black"
+        android:alpha="0.6"
         android:onClick="botonPulsado"
-        app:layout_constraintStart_toEndOf="@+id/tvOpcion4"
-        app:layout_constraintTop_toBottomOf="@+id/bOpcion3"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvOpcion4"/>
+        app:layout_constraintStart_toEndOf="@+id/tvEleccion3"
+        app:layout_constraintTop_toBottomOf="@+id/bEleccion2"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvEleccion3"/>
+
+    <TextView
+        android:id="@+id/tvEleccion4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEleccion3" />
+
+    <Button
+        android:id="@+id/bEleccion4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:text="Button"
+        android:backgroundTint="@color/black"
+        android:alpha="0.6"
+        android:onClick="botonPulsado"
+        app:layout_constraintStart_toEndOf="@+id/tvEleccion4"
+        app:layout_constraintTop_toBottomOf="@+id/bEleccion3"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvEleccion4"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
